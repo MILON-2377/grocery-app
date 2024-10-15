@@ -1,7 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
-import Dashboard from "../pages/Dashboard";
 import LogIn from "../pages/LogIn";
 import SignUp from "../pages/SignUp";
+import DashboardLayout from "../layouts/DashboardLayout";
+import Profile from "../pages/Profile";
+import Settings from "../pages/Settings";
+import Dashboard from "../pages/Dashboard";
 
 const router = createBrowserRouter([
   {
@@ -14,8 +17,22 @@ const router = createBrowserRouter([
   },
   {
     path:"/dashboard",
-    element: <Dashboard />
+    element: <DashboardLayout />,
+    children: [
+      {
+        path: "/dashboard/profile",
+        element: <Profile />
+      },
+      {
+        path: "/dashboard/settings",
+        element: <Settings />
+      },
+      {
+        path: "/dashboard/dashboard",
+        element: <Dashboard />
+      },
+    ],
   }
-]);
+])
 
 export default router;

@@ -11,9 +11,16 @@ export default function LogIn() {
   const [showPass, setShowPass] = useState(false);
   return (
     <div className="flex flex-col lg:flex-row p-5 lg:p-0  ">
-     
+      <h1 className=" lg:hidden text-3xl font-bold text-yellow-300 ">
+        FreshMart
+      </h1>
+
       <div className=" sm:mt-32 mt-10 lg:mt-0 w-full lg:w-[50vw] h-full">
-        <h1 className=" lg:hidden text-2xl sm:text-4xl font-bold text-green-500 lg:text-center ">
+        <h1 className=" hidden lg:block p-5 text-center text-3xl font-bold text-yellow-300 ">
+          FreshMart
+        </h1>
+
+        <h1 className=" sm:block lg:hidden hidden text-xl sm:text-2xl font-bold text-green-500 text-center ">
           Log In to Your Grocery Account
         </h1>
 
@@ -22,7 +29,7 @@ export default function LogIn() {
           <form className="  h-full lg:w-[65%] lg:mx-auto p-5 rounded-md w-full sm:w-[80%] mx-auto flex flex-col gap-5  ">
             <label className=" flex flex-col gap-2 ">
               <span className=" text-xl font-semibold text-gray-400 ">
-              User Name
+                User Name
               </span>
               <input
                 type="email"
@@ -55,10 +62,11 @@ export default function LogIn() {
                 Forgot password
               </p>
               <p className=" text-xs lg:text-[16px] sm:text-sm font-semibold ">
-                <span className=" text-gray-500 ">
-                  Do not have an account?
-                </span>
-                <Link to="/signup" className=" ml-2 text-green-500 hover:cursor-pointer underline ">
+                <span className=" text-gray-500 ">Do not have an account?</span>
+                <Link
+                  to="/signup"
+                  className=" ml-2 text-green-500 hover:cursor-pointer underline "
+                >
                   Sign up
                 </Link>
               </p>

@@ -19,14 +19,18 @@ export default function SignUp() {
   };
 
   return (
-    <div className=" flex lg:flex-row h-screen justify-between ">
-      <div className=" px-5 sm:px-0 w-full lg:w-[50%] h-[70%] lg:h-[80%] my-auto ">
-        <h1 className="text-4xl font-bold text-center">Create Your Account</h1>
+    <div className="relative flex lg:flex-row h-screen justify-between ">
+      <h1 className=" absolute left-[15%] lg:left-[10%] top-5 bg-yellow-50 px-4 rounded-md py-2 text-[#FFEB3B] font-bold text-4xl ">
+        FreshMart
+      </h1>
+
+      <div className="  px-5 py-10 w-full lg:w-[50%] h-[70%] lg:h-[80%] my-auto ">
+        <h1 className=" mt-10 border-b py-2 w-[60%] mx-auto  text-xl sm:text-4xl font-bold text-center ">Create Your Account</h1>
 
         {/* form */}
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className=" border lg:border-none my-auto mt-10 h-auto lg:w-[70%] p-5 sm:p-8 rounded-md w-full sm:w-[80%] mx-auto flex flex-col gap-5  "
+          className=" my-auto h-auto lg:w-[70%] p-5 sm:p-8 rounded-md w-full sm:w-[80%] mx-auto flex flex-col gap-5  "
         >
           <label className=" flex flex-col gap-2 ">
             <span className=" text-xl font-semibold text-gray-400 ">
@@ -89,10 +93,13 @@ export default function SignUp() {
 
           {/* sign up page link */}
           <div className=" flex items-center justify-between ">
-            <p className=" text-xs sm:text-xl hover:text-green-500 font-semibold text-gray-500 hover:cursor-pointer hover:underline ">
+            <p className=" text-xs sm:text-sm hover:text-green-500 font-semibold text-gray-500 hover:cursor-pointer hover:underline ">
               Forgot password
             </p>
-            <p className=" text-xs sm:text-xl font-semibold ">
+            <span>
+              ||
+            </span>
+            <p className=" text-xs sm:text-sm font-semibold ">
               <span className=" text-gray-500 ">Do not have an account?</span>{" "}
               <Link
                 to="/"
